@@ -24,4 +24,4 @@ module.exports = `<svg height="20" width="20" viewBox="0 0 24 24"><path d="M12 0
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("tippy.js");var e=i(require("./src/setupSvg")),r=i(require("./src/setupOutboundLinks")),s=i(require("./src/initTyping")),u=i(require("./src/secondTyping"));function i(e){return e&&e.__esModule?e:{default:e}}require("normalize.css"),require("tippy.js/dist/tippy.css"),require("./styles.css"),(0,e.default)(),(0,r.default)(),(0,s.default)(),(0,u.default)();
 },{"tippy.js":"U0GE","./src/setupSvg":"AkK+","./src/setupOutboundLinks":"eJYs","./src/initTyping":"SE79","./src/secondTyping":"cruQ","normalize.css":"9KIJ","tippy.js/dist/tippy.css":"9KIJ","./styles.css":"9KIJ"}]},{},["Focm"], null)
-//# sourceMappingURL=/judithzhuwebsite.6f9d5d66.map
+//# sourceMappingURL=/judithzhu.com.6f9d5d66.map
