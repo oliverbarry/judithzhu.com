@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://oliverlaso.com" />
+
+    <title>Oliver Laso</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="module" src="https://www.googletagmanager.com/gtag/js?id=UA-127524927-1"></script>
+    <script type="module">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-127524927-1');
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="main-text"></div>
+      <div id="text-wrapper">
+        <div id="first-subtext" class="first-subtext"></div><div id="second-subtext" class="second-subtext"></div>
+      </div>
+    </div>
+    <div id="links" class="links collapsed">
+      <a class="inlink link" data-href="about.html" data-tippy="Let's Taco About Me!" target="_self">
+        <span class="icon" id="icon-taco"></span>
+      </a>
+      <div class="link outlink" data-href="mailto:oliverlaso@me.com" data-tippy="Email Me!">
+        <span class="icon" id="icon-email"></span>
+      </div>
+      <div class="outlink link" data-href="https://www.linkedin.com/in/oliver-barry/" data-tippy="Let's link up!">
+        <span class="icon" id="icon-linked-in"></span>
+      </div>
+      <div class="outlink link" data-href="https://www.instagram.com/oliverwbarry/?hl=en" data-tippy="Personal Instagram">
+        <span class="icon fill-black" id="icon-instagram"></span>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
