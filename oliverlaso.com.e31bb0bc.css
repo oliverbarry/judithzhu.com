@@ -443,11 +443,80 @@ body {
 }
 
 .backlink{
-  left: 10px;
+  position: absolute;
+  padding-left: 5%;
+  padding-top: 5%;
+  z-index: 1000;
 }
 
 .fill-black {
   fill: #000;
 }
+
+.blog-container{
+  position: fixed;
+  padding-left: 24%;
+  padding-top: 10%;
+}
+
+.blog-title h2{
+  font-size: 1em;
+  color: #302f2f;
+}
+
+.article-container{
+  margin: 10% auto;
+  display: absolute;
+  overflow-y:auto;
+  scrollbar-color: #e0dfcf transparent;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
+}
+
+article > * {
+  grid-column: 4;
+}
+
+article > figure {
+  grid-column: 2 / -2;
+  margin: 20px 0;
+}
+
+article > blockquote {
+  grid-column: 3 / 5;
+  padding-left: 10px;
+  color: #666;
+  border-left: 3px solid black;
+}
+
+.aside {
+  grid-column: 5;
+}
+
+ul {
+  display: list-item;
+  list-style-position: inside;
+  padding: 0;
+  padding-top: 5%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: #361e06;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #361e06;
+}
+
+
 
 /*# sourceMappingURL=/oliverlaso.com.e31bb0bc.css.map */
