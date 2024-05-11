@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "parcel index.html -p 8080",
-    "build": "rm -rf ./dist && npx parcel build index.html --no-minify && npx parcel build --no-minify blog.html && cp CNAME ./dist",
+    "build": "rm -rf ./dist && npx parcel build index.html --no-minify && npx parcel build --no-minify blog.html && npx parcel build 'posts/*' && cp CNAME ./dist",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "typeit": "^5.10.7"
   },
   "dependencies": {
-    "about": "^2.0.1",
+    "about": "^1.0.0",
     "normalize.css": "^8.0.0",
     "parcel-bundler": "^1.10.3",
     "parcel-plugin-inlinesvg": "^0.0.14",
