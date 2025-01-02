@@ -1,5 +1,3 @@
-import TypeIt from "typeit";
-
 const DEFAULT_SPEED = 120;
 const typitElementId = "#main-text";
 const linksElementId = "#links";

@@ -7,11 +7,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "parcel index.html -p 8080",
-    "build": "rm -rf ./dist && npx parcel build index.html --no-minify && npx parcel build --no-minify blog.html && npx parcel build 'posts/*' && cp CNAME ./dist",
+    "dev": "eleventy --serve",
+    "build": "eleventy",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
     "normalize.css": "^8.0.0",
     "parcel-bundler": "^1.10.3",
     "parcel-plugin-inlinesvg": "^0.0.14",
@@ -20,10 +21,10 @@
   },
   "dependencies": {
     "about": "^1.0.0",
+    "luxon": "^3.5.0",
     "normalize.css": "^8.0.0",
     "parcel-bundler": "^1.10.3",
     "parcel-plugin-inlinesvg": "^0.0.14",
-    "tippy.js": "^3.4.1",
     "typeit": "^5.10.7"
   }
 }
