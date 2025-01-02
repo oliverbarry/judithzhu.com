@@ -1,31 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog</title>
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1 class="blog-title">Blog</h1>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../styles.css" type="text/css" />
+    <title>Blog</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="logo" href="/">home</a>
+      <nav>
+        <a href="https://github.com/oliverlaso" target="_blank" rel="noopener noreferrer">github</a>
+        <a href="/about">about</a>
+      </nav>
     </header>
-    <main>
-      <ul>
+
+    <div class="container">
+      <h1 class="title">Blog</h1>
+      <ul class="posts">
         
-        
-        <li>
-          <a href="/posts/speaking-the-same-language/">Speaking the Same Language</a>
-          <small>%B %1, %Y</small>
+        <li class="post">
+          <a href="/posts/speaking-the-same-language/">
+            <date>January 1, 2025</date>
+            <span>Speaking the Same Language</span>
+          </a>
         </li>
         
-        
       </ul>
-    </main>
-    <footer>
-      <a href="/" class="back-to-home">Back to Home</a>
-    </footer>
-  </div>
-</body>
+    </div>
+  </body>
 </html>
+

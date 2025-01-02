@@ -8,17 +8,19 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>{{ title }}</h1>
-        <p>{{ date | date("MMMM d, yyyy") }}</p>
+    <header class="post-header">
+      <div class="title-container">
+        <h1 class="title">{{ title }}</h1>
+        
+      </div>
     </header>
-    <main>
+    <main class="post-content">
+      <p class="post-date">{{ date | date("MMMM d, yyyy") }}</p>
       {{ content | safe }}
     </main>
-    <footer>
-      <a href="/blog.html">Back to Blog</a>
+    <footer class="post-footer">
+      <a href="/blog/" class="back-to-blog">← Back to Blog</a>
     </footer>
   </div>
 </body>
 </html>
-

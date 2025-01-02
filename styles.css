@@ -1,242 +1,282 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+    font: 100%/1.5 sans-serif;
+    word-wrap: break-word;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 125%;
+        max-width: 42em;
+    }
+}
 
 body {
-  font-family: "Ubuntu Sans Mono", monospace, Garamond, Arial, "Helvetica Neue", sans-serif;
-  height: 100%;
-  height: 100vh;
-  box-shadow: 2px 3px 20px #000000, 0 0 60px #8a4d0f inset;
-  background: #fffef0;
-  display: flex;
-  flex-direction: column; /* Ensure vertical stacking for smaller screens */
-  margin: 0;
-  padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #fffef0;
+    margin: 0;
 }
 
-.container {
-  position: absolute;
-  align-items: center;
-  display: inline;
-  flex-direction: column;
-  left: 50%;
-  top: 50%;
-  width: 80%;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  color: #000;
-  text-align: center;
-  padding-left: 10%;
-  padding-right: 10%;
+/* Main Text for Typing Effect */
+#main-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.subtext-container {
-  display: flex;
-  flex-direction: row;
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 42em;
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
 }
 
-.second-subtext {
-  display: inline-block;
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.header {
-  display: inline-block;
-  font-size: 2em;
-  margin-bottom: 5px;
+header a {
+    text-decoration: none;
+    color: #fa6432;
+    font-size: 1rem;
 }
 
-.sub-text {
-  color: rgb(0, 0, 0);
-  font-size: 1.5em;
-  line-height: 1.4em;
+header a:hover, header a:focus, header a:active {
+    text-decoration: underline;
 }
 
+h1, h2, h3, h4 {
+    margin: 2.5rem 0 1.5rem 0;
+    line-height: 1.25;
+    color: #333;
+}
+
+/* Links Section */
 .links {
-  display: flex;
-  height: auto;
-  color: #000;
-  margin-top: 20px;
-  max-height: 100px;
-  overflow: hidden;
-  transition: max-height 1s ease-out;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in, max-height 0.5s ease-in;
 }
 
-#links {
-  position: fixed;
-  top: 10px;
-  right: 30px;
-  width: auto;
-  height: auto;
-}
-
-.links.collapsed {
-  max-height: 0;
+.links:not(.collapsed) {
+    opacity: 1;
+    max-height: 200px;
 }
 
 .links .link {
-  background-color: transparent;
-  color: black;
-  border-radius: 90%;
-  cursor: pointer;
-  margin: 10px 10px;
-  padding: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: #fa6432;
+    transition: transform 0.2s ease-in-out;
 }
 
 .links .link:hover {
-  background-color: transparent;
+    transform: scale(1.1);
 }
 
-.links .link p {
-  font-size: 0.8em;
-  margin-bottom: 0;
+.links .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.backlink {
-  position: absolute;
-  padding-left: 5%;
-  padding-top: 5%;
-  z-index: 1000;
+/* Blog Post List */
+.posts {
+    margin: 1em 0;
+    padding: 0;
+    list-style: none;
 }
 
-.fill-black {
-  fill: #000;
+.posts .post a {
+    display: flex;
+    padding: 0.5em 0;
+    color: black;
+    text-decoration: none;
 }
 
-.blog-container {
-  position: fixed;
-  padding-left: 24%;
-  padding-top: 10%;
+.posts .post a:hover, .posts .post a:focus, .posts .post a:active {
+    text-decoration: none;
+    background: rgba(200, 200, 200, 0.2);
 }
 
-.blog-title h2 {
-  font-size: 1em;
-  color: #302f2f;
+.posts .post date {
+    font-family: monospace, monospace;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    padding-right: 2rem;
+    color: grey;
 }
 
-.article-container {
-  margin: 10% auto;
-  display: absolute;
-  overflow-y: auto;
-  scrollbar-color: #e0dfcf transparent;
+/* Lists */
+ol, ul {
+    margin: 1em 0;
+    padding: 0;
 }
 
-article {
-  display: grid;
-  grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
+ol li, ul li {
+    margin-bottom: 0.5em;
 }
 
-article > * {
-  grid-column: 4;
+ol li ol, ol li ul, ul li ol, ul li ul {
+    margin: 0 2em;
 }
 
-article > figure {
-  grid-column: 2 / -2;
-  margin: 20px 0;
+/* Blockquote */
+blockquote {
+    padding-left: 1em;
+    font-style: italic;
+    border-left: solid 1px #fa6432;
+    margin: 1em 0;
 }
 
-article > blockquote {
-  grid-column: 3 / 5;
-  padding-left: 10px;
-  color: #666;
-  border-left: 3px solid black;
+/* Footer */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
 }
 
-.aside {
-  grid-column: 5;
+footer .subtitle {
+    font-size: 1rem;
+    color: #666;
 }
 
-container > .blog-title {
-  position: absolute;
-  top: 20px; /* Adjust for desired vertical position */
-  left: 20px; /* Adjust for desired horizontal position */
-  font-size: 2rem; /* Adjust font size */
-  margin: 0;
+/* Blog Post Header */
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
 }
 
-container > .back-to-home {
-  position: absolute;
-  bottom: 20px; /* Adjust for desired vertical position */
-  left: 20px; /* Adjust for desired horizontal position */
-  font-size: 1rem;
-  text-decoration: none;
-  color: #000; /* Adjust color */
+.title-container {
+    display: inline-flex;
+    align-items: baseline; /* Align the "Back to Blog" link with the title */
+    gap: 1rem; /* Add space between the title and the link */
+    flex-wrap: wrap; /* Ensure the layout adapts on smaller screens */
+    justify-content: center;
 }
 
-container > .back-to-home:hover {
-  text-decoration: underline;
+.title-container .title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-ul {
-  display: list-item;
-  list-style-position: inside;
-  padding: 0;
-  padding-top: 5%;
-  margin: 0;
+.title-container .back-to-blog {
+    font-size: 0.7rem; /* Smaller font for the link */
+    color: #fa6432;
+    text-decoration: none;
+    align-self: center; /* Align the link with the title */
 }
 
-a {
-  text-decoration: none;
+.title-container .back-to-blog:hover {
+    text-decoration: underline;
 }
 
-a:link, a:visited {
-  color: #361e06;
+/* Post Content */
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+    flex-grow: 1;
 }
 
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: #361e06;
+.post-content .post-date {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Post Footer */
+.post-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.post-footer .back-to-blog {
+    font-size: 1rem;
+    color: #fa6432;
+    text-decoration: none;
+}
+
+.post-footer .back-to-blog:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    box-shadow: none;
-    padding: 0;
-  }
+    html {
+        padding: 1em;
+    }
 
-  .container {
-    position: static;
-    width: 100%;
-    padding: 10px;
-    transform: none;
-  }
+    body {
+        padding: 0 1em;
+    }
 
-  .header {
-    font-size: 1.5em;
-  }
+    #main-text {
+        font-size: 2rem;
+    }
 
-  .sub-text {
-    font-size: 1em;
-    line-height: 1.2em;
-  }
+    .links .link {
+        width: 40px;
+        height: 40px;
+    }
 
-  .links {
-    flex-direction: column;
-    position: static;
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
-  }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .links .link {
-    margin: 5px 0;
-    font-size: 1em;
-  }
+    header nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-  article {
-    grid-template-columns: 1fr;
-    margin: 0;
-  }
+    .post-header .title {
+        font-size: 2rem;
+    }
 
-  article > * {
-    grid-column: 1;
-  }
-
-  article > figure {
-    grid-column: 1;
-  }
-
-  article > blockquote {
-    grid-column: 1;
-    padding-left: 5px;
-  }
+    .post-content {
+        font-size: 1rem;
+    }
 }
+
