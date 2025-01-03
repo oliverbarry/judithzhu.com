@@ -8,16 +8,20 @@
 </head>
 <body class="blog-post">
   <div class="container">
-    <header class="post-header">
+    <header class="header">
+      <a class="logo-back" href="/blog/">← Back to Blog</a>
+    </header>
+    <div class="post-header">
       <div class="title-container">
         <h1 class="title">{{ title }}</h1>
-        
       </div>
-    </header>
+    </div>
+
     <main class="post-content">
       <p class="post-date">{{ date | date("MMMM d, yyyy") }}</p>
       {{ content | safe }}
     </main>
+
     <footer class="post-footer">
       <a href="/blog/" class="back-to-blog">← Back to Blog</a>
     </footer>
