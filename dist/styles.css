@@ -105,19 +105,18 @@ body {
 }
 
 img {
-  max-width: 100%; /* Scale down if larger than container */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Avoid inline spacing issues */
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Base styles for <pre> elements (block code) */
 pre {
-  background: inherit; /* Transparent background */
+  background: inherit;
   padding: 1em;
   border-radius: 5px;
   overflow: auto;
-  font-size: 0.1rem; /* Adjust font size for block code */
-  font-family: "Caskaydia Mono Nerd Font", monospace; /* Consistent monospace font */
+  font-size: 0.1rem;
+  font-family: "Caskaydia Mono Nerd Font", monospace;
 }
 
 pre, code {
@@ -199,7 +198,7 @@ body.front-page .links .link {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: transparent; /* Transparent background */
+    background-color: transparent;
     text-decoration: none;
     color: #f53e3e;
     transition: transform 0.2s ease-in-out;

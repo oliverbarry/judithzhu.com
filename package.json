@@ -14,8 +14,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "normalize.css": "^8.0.0",
-    "parcel-bundler": "^1.10.3",
-    "parcel-plugin-inlinesvg": "^0.0.14",
     "tippy.js": "^3.4.1",
     "typeit": "^5.10.7"
   },
@@ -23,8 +21,6 @@
     "about": "^1.0.0",
     "luxon": "^3.5.0",
     "normalize.css": "^8.0.0",
-    "parcel-bundler": "^1.10.3",
-    "parcel-plugin-inlinesvg": "^0.0.14",
     "typeit": "^5.10.7"
   }
 }
