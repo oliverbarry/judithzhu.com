@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markdown Syntax Guide: A Comprehensive Test</title>
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 </head>
 <body class="blog-post">
   <div class="container">
@@ -38,10 +39,8 @@
 <h2>Inline Code and Blocks</h2>
 <p>Use inline code for <code>variables</code> or <code>function names</code>.</p>
 <h3>Code Block Example (JavaScript)</h3>
-<pre><code class="language-javascript">const greet = (name) =&gt; {
-  console.log(`Hello, ${name}!`);
-};
-greet('World');
+<pre><code class="language-python">def greet(name_this):
+    print(f&quot;Hello, {name}!&quot;)
 </code></pre>
 
     </main>
@@ -50,5 +49,9 @@ greet('World');
       <a href="/blog/" class="back-to-blog">← Back to Blog</a>
     </footer>
   </div>
+  <!-- Prism.js Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <!-- Prism.js Python Language -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 </html>

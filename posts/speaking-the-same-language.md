@@ -42,9 +42,7 @@ Use inline code for `variables` or `function names`.
 
 ### Code Block Example (JavaScript)
 
-```javascript
-const greet = (name) => {
-  console.log(`Hello, ${name}!`);
-};
-greet('World');
+```python
+def greet(name_this):
+    print(f"Hello, {name}!")
 ```
