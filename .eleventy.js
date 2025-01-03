@@ -25,6 +25,9 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(new Date(dateObj), { zone: "utc" }).toFormat(format);
   });
 
+  // Pass through the fonts directory
+  eleventyConfig.addPassthroughCopy("assets/fonts");
+
   // Default Eleventy settings
   return {
     dir: {

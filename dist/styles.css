@@ -1,3 +1,31 @@
+@font-face {
+    font-family: "Caskaydia Mono Nerd Font";
+    src: url("./assets/fonts/CaskaydiaMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Caskaydia Mono Nerd Font";
+    src: url("./assets/fonts/CaskaydiaMonoNerdFont-Bold.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Caskaydia Mono Nerd Font";
+    src: url("./assets/fonts/CaskaydiaMonoNerdFont-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Caskaydia Mono Nerd Font";
+    src: url("./assets/fonts/CaskaydiaMonoNerdFont-Light.ttf") format("truetype");
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +51,7 @@ html {
 /* General Body Styles */
 body {
     background-color: #fffef0;
-    font-family: sans-serif;
+    font-family: "Caskaydia Mono Nerd Font", monospace;
     margin: 0;
     padding: 0;
 }
@@ -41,9 +69,9 @@ body {
 }
 
 .header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fa6432;
+    font-size: 1rem;
+    /* color: #fa6432;*/
+    color: #333;
     text-decoration: none;
 }
 
@@ -129,10 +157,10 @@ body.blog-list .container {
 }
 
 body.blog-list .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #333;
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: left;
 }
 
 body.blog-list .posts {
@@ -179,15 +207,21 @@ body.blog-post .post-header {
 }
 
 body.blog-post .post-header .title {
-    font-size: 2.5rem;
+    font-size: clamp(1.2rem, 4vw, 2rem); /* Dynamically adjust font size */
     color: #333;
     margin-bottom: 0.5rem;
-}
+    text-align: center; 
+    overflow-wrap: break-word; /* Break words only if necessary */
+    /*white-space: nowrap; /* Prevent wrapping */
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 
-body.blog-post .post-header .post-date {
-    font-size: 1rem;
+
+body.blog-post .post-content .post-date {
+    font-size: 0.8rem;
     color: #666;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 body.blog-post .post-content {
