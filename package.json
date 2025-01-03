@@ -7,8 +7,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy",
+    "clean": "rm -rf dist",
+    "dev": "npm run clean && eleventy --serve",
+    "build": "npm run clean && eleventy",
+    "new-post": "node scripts/create-post.js",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
