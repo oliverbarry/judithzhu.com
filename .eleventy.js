@@ -28,7 +28,16 @@ module.exports = function (eleventyConfig) {
   // Pass through the fonts directory
   eleventyConfig.addPassthroughCopy("assets/fonts");
 
-  // Default Eleventy settings
+  // Add a collection sorted by date in descending order
+  eleventyConfig.addCollection("sortedPosts", function (collectionApi) {
+    const posts = collectionApi.getFilteredByGlob("posts/*.md");
+    return posts.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB - dateA; // Newest first
+    });
+  });
+   // Default Eleventy settings
   return {
     dir: {
       input: ".",

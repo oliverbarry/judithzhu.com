@@ -10,16 +10,16 @@
     <header class="header">
       <a class="logo" href="/">home</a>
       <nav>
-        <a href="https://github.com/oliverlaso" target="_blank" rel="noopener noreferrer">github</a>
+        <a class= "logo" href="https://github.com/oliverlaso" target="_blank" rel="noopener noreferrer">github</a>
       </nav>
     </header>
     <div class="container">
       <h1 class="title">blog</h1>
       <ul class="posts">
-        {% for post in collections.posts %}
+        {% for post in collections.sortedPosts | reverse %}
         <li class="post">
           <a href="{{ post.url }}">
-            <date>{{ post.date | date: "MMMM d, yyyy" }}</date>
+            <date>{{ post.date | date: "yyyy-MM-dd" }}</date>
             <span>{{ post.data.title }}</span>
           </a>
         </li>

@@ -71,7 +71,7 @@ body {
 .header .logo {
     font-size: 1rem;
     /* color: #fa6432;*/
-    color: #333;
+    color: #f53e3e;
     text-decoration: none;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .header nav a:hover {
-    color: #fa6432;
+    color: #f53e3e;
     text-decoration: underline;
 }
 
@@ -133,7 +133,7 @@ body.front-page .links .link {
     border-radius: 50%;
     background-color: transparent; /* Transparent background */
     text-decoration: none;
-    color: #fa6432;
+    color: #f53e3e;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -183,6 +183,8 @@ body.blog-list .posts .post a {
 
 body.blog-list .posts .post a:hover {
     text-decoration: underline;
+    text-decoration-color: #f53e3e;
+    text-decoration-thickness: 0.5px;
     background: rgba(200, 200, 200, 0.2);
 }
 
@@ -242,7 +244,7 @@ body.blog-post .post-footer {
 
 body.blog-post .post-footer .back-to-blog {
     font-size: 1rem;
-    color: #fa6432;
+    color: #f53e3e;
     text-decoration: none;
 }
 
